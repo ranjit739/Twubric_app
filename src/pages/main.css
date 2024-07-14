@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.table-container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap; /* Optional: To wrap tables to the next line if they don't fit in a single row */
+    gap: 20px; /* Space between tables */
+}
+.custom-table {
+    width: 350px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.custom-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+.header-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
+    /* font-style: italic; */
+}
+.header-content h6{
+   font-weight: 800;
+    /* font-style: italic; */
+}
+.btn-link{
+cursor: pointer;
+font-weight: bold;
+font-weight: 800;
+text-align: end;
+text-decoration: none;
+/* display: flex; */
+/* align-items: end; */
+
+}
+
+
+.styled-table {
+    border-collapse: collapse;
+    width: 400px;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+.styled-table td {
+ border: 1px solid black;
+ padding: 10px;
+}
+.styled-table h6{
+    font-weight: 800;
+}
+.styled-table th{
+    font-weight: 800;
+    cursor: pointer;
+}
+.btn{
+    /* height: 30px; */
+}
+
