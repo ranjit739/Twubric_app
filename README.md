@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Usage
+Sorting by Twubric Score, Friends, Influence, and Chirpiness:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Click on the respective button to sort followers by that criterion.
+The sort order will toggle between ascending and descending on each click.
+The current sort order is indicated by an upward or downward arrow next to the button.
+Filtering by Join Date:
 
-## Available Scripts
+Select a start date and an end date using the date inputs.
+Click the "Submit" button to filter followers who joined Twitter within the selected date range.
+The filtered results will be displayed, sorted by join date in ascending or descending order based on the current sort order.
+Components
+Main Component (Main.js):
 
-In the project directory, you can run:
+Fetches followers data from the provided URL.
+Manages state for followers, sort order, and date filters.
+Implements sorting and filtering logic.
+SortButtons Component (SortButtons.js):
 
-### `npm start`
+Displays sorting buttons for various criteria.
+Shows date inputs for filtering followers by join date.
+Displays appropriate SVG arrows based on the current sort order.
+FollowerList Component (FollowerList.js):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Displays the list of followers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Updates dynamically based on sorting and filtering.
 
-### `npm test`
+Styling
+Basic styling is provided via main.css.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Additional styles for SVG icons and buttons.
+Example Data
+The application fetches followers data from the following URL:
 
-### `npm run build`
+bash
+Copy code
+https://gist.githubusercontent.com/pandemonia/21703a6a303e0487a73b2610c8db41ab/raw/82e3ef99cde5b6e313922a5ccce7f38e17f790ac/twubric.json
+Key Functions
+getData: Fetches the followers data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+convertDateToUnixTimestamp: Converts a date string to a Unix timestamp and updates the state.
+convertDateToUnixTimestamp1: Converts a date string to a Unix timestamp and updates the state for the end date.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+handleSort: Sorts followers based on the selected criterion and toggles the sort order.
+onSortByDate: Filters followers by the selected date range and sorts by join date.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dependencies
+React
+Axios
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
